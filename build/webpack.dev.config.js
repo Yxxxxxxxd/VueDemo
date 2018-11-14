@@ -31,5 +31,13 @@ module.exports = merge(webpackBaseConfig, {
             template: './src/template/index.ejs',
             inject: false
         })
-    ]
+    ],
+    devServer: {
+        contentBase: './',
+        historyApiFallback: true,
+        port:8888,
+        inline: true,
+        hot:true,
+        compress:true
+    }
 });
